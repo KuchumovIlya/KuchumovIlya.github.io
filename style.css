@@ -1,0 +1,205 @@
+* {
+	margin: 0;
+    padding: 0;
+}
+
+.menu_link > a { 
+	text-decoration: none;
+	color: black;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.clear {
+  	clear: both;
+}
+
+.page_content {
+	height: 100%;
+	width: 100%;
+}
+
+.wrap {
+	display: block;
+	width: 100%;
+	min-height: 100%;
+}
+
+.logo {
+	width: 100%;
+	background-color: #DEBA6F;
+	text-align: center;
+	font-size: 2.25em;
+}
+
+.menu {
+	width: 100%;
+	display: table;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding-bottom: 0.5em;
+	border-bottom: 0.125em solid #E6F9AF;
+}
+
+.menu_item {
+	width: 25%;
+	text-align: center;
+	display: table-cell;
+	font-size: 1.5em;
+}
+
+.main_content {
+	width: 60%;
+	height: 100%;
+	float: right;
+	margin: 1em;
+	border-bottom: 0.125em solid #E6F9AF;
+}
+
+.main_image {
+	max-width: 100%;
+	margin-bottom: 1em;
+}
+
+.main_text {
+	width: 100%;
+	font-size: 120%;
+	margin-bottom: 1em;
+}
+
+.main_header {
+	text-align: center;
+	font-size: 2em;
+	width: 100%;
+	border-bottom: 0.075em solid #E6F9AF;
+	margin-bottom: 0.5em;
+}
+
+.navigation {
+	width: 30%;
+	float: left;
+}
+
+.navigation_text {
+	width: 100%;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.navigation_item {
+	width: 100%;
+}
+
+.navigation_img {
+	width: 100%;
+	padding-bottom: 2em;
+}
+
+.footer {
+	text-align: center;
+	background-color: #F1DAC4;
+}
+
+.gallery_wrap {
+	max-width: 100%;
+	height: 30%;
+}
+
+.small_left_clicker {
+	width: 100%;
+	margin-bottom: 0.5em;
+}
+
+.small_right_clicker {
+	width: 100%;
+}
+
+.gallery {
+	display: table;
+	width: 100%;
+	border-spacing: 1em;
+}
+
+.gallery_item {
+	display: table-cell;
+	width: 30%;
+
+}
+
+.small_image {
+	width: 100%;
+}
+
+.shadow_block {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: black;
+	opacity: 0.7;
+}
+
+.big_wrap {
+	position: fixed;
+	top: 15%;
+	left: 25%;
+	width: 50%;
+	height: 50%;
+}
+
+.big_left_clicker {
+	width: 100%;
+}
+
+.big_right_clicker {
+	width: 100%;
+}
+
+.big_stop_clicker {
+	width: 100%;
+}
+
+.big_image {
+	width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .navigation {
+		width: 50%;
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.main_content {
+		width: 100%;
+		height: 100%;
+		float: none;
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+@media screen and (max-width: 550px) {
+    .menu {
+    	border-spacing: 0.5em;
+		border-bottom: none;
+	}
+
+    .menu_item {
+		display: table-row;
+	}
+
+	.menu_link {
+		padding-bottom: 0.25em;
+		border-bottom: 0.1em solid #E6F9AF;
+	}
+}
