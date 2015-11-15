@@ -38,9 +38,11 @@ function shift_gallery(dx)
 }
 
 
-function parse_id(id)
-{										
-	return parseInt(id.substring("small_image".length));
+function parse_id(src)
+{
+	var index = src.lastIndexOf('.');
+	var substr = src.substring(2, index);
+	return parseInt(parseInt(substr));
 }
 
 
@@ -94,7 +96,7 @@ $(document).ready(function()
 
 	$(".small_image").click(function()
 	{
-		var id = parse_id($(this).attr("id"));
+		var id = parse_id($(this).attr("src"));
 		cur_big_shift = id;
 		fix_big();
 	});
