@@ -1,7 +1,7 @@
 cur_small_shift = 0;
 cur_big_shift = 0;
 gallery_size = 3;
-storage_size = 6;
+storage_size = 7;
 
 
 function fix_gallery()
@@ -38,11 +38,9 @@ function shift_gallery(dx)
 }
 
 
-function parse_id(src)
-{
-	var index = src.lastIndexOf('.');
-	var substr = src.substring(2, index);
-	return parseInt(parseInt(substr));
+function parse_id(id)
+{										
+	return parseInt(id.substring("small_image".length));
 }
 
 
@@ -96,8 +94,7 @@ $(document).ready(function()
 
 	$(".small_image").click(function()
 	{
-		var id = parse_id($(this).attr("src"));
-		//id == -1
+		var id = parse_id($(this).attr("id"));
 		cur_big_shift = id;
 		fix_big();
 	});
