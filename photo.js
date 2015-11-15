@@ -1,7 +1,7 @@
 cur_small_shift = 0;
 cur_big_shift = 0;
 gallery_size = 3;
-storage_size = 7;
+storage_size = 6;
 
 
 function fix_gallery()
