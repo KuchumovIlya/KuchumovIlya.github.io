@@ -8,8 +8,15 @@ function fix_gallery()
 {
 	for (var i = 0; i < gallery_size; i++)
 	{
-		var number = (cur_small_shift + i) % storage_size;
-		$("#small_image" + i).attr("src", "./" + number + ".jpg");
+		var number = cur_small_shift + i;
+		$("#small_image" + i).attr("src", "./load.gif");
+		var img = $("<img " + "id=\"" + i + "\"" + "/>");
+		img.load(function()
+		{
+			var cls = "#small_image" + $(this).attr("id");
+			$(cls).attr("src", $(this).attr("src"));
+		});
+		img.attr("src", "./" + number + ".jpg");
 	}
 }
 
@@ -75,6 +82,7 @@ function stop_big()
 $(document).ready(function()
 {
 	stop_big();
+	fix_gallery();
 
 	$(".small_left_clicker").click(function()
 	{
@@ -89,6 +97,7 @@ $(document).ready(function()
 	$(".small_image").click(function()
 	{
 		var id = parse_id($(this).attr("src"));
+		//id == -1
 		cur_big_shift = id;
 		fix_big();
 	});
