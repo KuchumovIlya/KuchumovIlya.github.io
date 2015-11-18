@@ -135,6 +135,11 @@ body {
 
 .small_image {
 	width: 100%;
+	border: 3px solid white;
+}
+
+.small_image:hover {
+	border: 3px solid #4da6ff;
 }
 
 .shadow_block {
@@ -148,8 +153,8 @@ body {
 }
 
 .big_wrap {
-	position: fixed;
-	top: 15%;
+	position: absolute;
+	top: 5%;
 	left: 25%;
 	width: 50%;
 	height: 50%;
@@ -165,6 +170,7 @@ body {
 
 .big_stop_clicker {
 	width: 100%;
+	margin-bottom: 0.25em;
 }
 
 .big_image {
